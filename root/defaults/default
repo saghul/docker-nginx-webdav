@@ -2,9 +2,9 @@ server {
 	listen 80 default_server;
 	server_name _;
 	client_max_body_size 0;
+	root /data;
 
 	location / {
-		root      /data;
     		dav_ext_methods   PROPFIND OPTIONS;
     		dav_access    user:r group:r all:r;
     		autoindex     on;
