@@ -8,7 +8,7 @@ RUN \
 	rm -f /etc/nginx/conf.d/default.conf
 
 # add local files
-COPY root/ /
+COPY rootfs/ /
 
 # ports and volumes
 EXPOSE 80
