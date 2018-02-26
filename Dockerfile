@@ -4,7 +4,7 @@ FROM saghul/debian-s6
 RUN \
 	apt-dpkg-wrap apt-get update && \
 	apt-dpkg-wrap apt-get install -y nginx-light libnginx-mod-http-dav-ext && \
-	rm -rf /var/lib/apt/lists/ && \
+	apt-cleanup && \
 	rm -f /etc/nginx/conf.d/default.conf
 
 # add local files
